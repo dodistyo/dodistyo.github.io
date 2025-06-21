@@ -70,10 +70,6 @@ It's been an incredibly rewarding year. By layering security from the perimeter 
 
 ### And what’s next?
 
-{{< typeit group=answer >}}
 **More Cybersecurity and AI hands-on I guess . . .**
-{{< /typeit >}}
 
-{{< typeit group=answer >}}
 **And hopefully more writing**
-{{< /typeit >}}
