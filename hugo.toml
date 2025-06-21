@@ -213,7 +213,7 @@ languageName = "English"
     enable = true
     # Google Analytics
     [params.analytics.google]
-      id = "G-G4BV2F1CPG"
+      id = "G-QKK8H9P4VL"
       # LoveIt DELETED | 0.3.1 whether to anonymize IP
       anonymizeIP = true
       # LoveIt NEW | 0.3.1 whether to respect the browser’s “do not track” setting
