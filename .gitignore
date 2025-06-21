@@ -1,0 +1,27 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/hugo_stats.json
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Node.js (if using npm or yarn for themes or tools)
+/node_modules/
+/package-lock.json
+/yarn.lock
+
+# Environment/Secrets
+.env
+*.env.*
+
+# Logs
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.code-workspace
