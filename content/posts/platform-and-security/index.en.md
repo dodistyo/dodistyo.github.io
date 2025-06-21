@@ -21,13 +21,13 @@ comment:
 Alright, so here are the takes from a guy who's been knee-deep in platform and security. building stuff, breaking stuff, securing it, then unbreaking it again. You know, the usual.
 <!--more-->
 ## Connecting And Securing Hybrid Infrastructure {#connect-and-secure-infra}
-Our world revolves around a hybrid infrastructure, a mix of on-premise data centers, multiple on-premise sites and cloud workloads in GCP. The first major hurdle was securing the traffic moving *between* these different environments. For connecting and securing this *north-south* traffic, we use `FortiGate` firewall and its SD-WAN capability for the solution, which effectively bridges all of our sites into one secure, private network.
+Our world revolves around a hybrid infrastructure, a mix of on-premise data centers, multiple on-premise sites and cloud workloads in GCP. The first major hurdle was securing the traffic moving *between* these different environments. For connecting and securing this *north-south* traffic, we use `FortiGate` firewall and its SD-WAN capability for the solution, which effectively bridges all of our sites including cloud into one secure, private network.
 
 
-To protect our public-facing applications, we use `FortiWeb` as our WAF. We picked FortiWeb because we need a WAF solution that not only works for the cloud, but also for applications that are on-premises. We provision it in our cloud infrastructure using PAYG licensing, so it’s more flexible in terms of scaling and budgeting.
+To protect our public-facing applications, we picked `FortiWeb` as our WAF. We picked FortiWeb because we need a WAF solution that not only works for protecting our cloud applications, but also is able to protect our applications that are on-premises. We provision it in our cloud infrastructure using GCP PAYG licensing, so it’s more flexible in terms of scaling and budgeting. In order to make it reliable, we provision it in High-Availability mode with Active-Active instances. It sure doubled the cost, but in exchange for a more reliable system.
 
 
-Then, we focused on securing the traffic *inside* the clusters (east-west traffic). This required a two-part strategy: encryption and access control.
+Then, we focused on securing the traffic *inside* the kubernetes clusters (east-west traffic). This required a two-part strategy: encryption and access control.
 
 
 1. `Encryption`: To enforce a Zero Trust model, it was critical that all service-to-service communication was encrypted. For this, we use `Linkerd` (because of its light-weightness) as our service mesh, providing automatic, end-to-end encryption with mutual TLS (mTLS).
