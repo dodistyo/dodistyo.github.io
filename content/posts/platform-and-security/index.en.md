@@ -63,7 +63,8 @@ Whatever my job title says, code keeps dragging me back in. Just like what I men
 
 ## Stay Relevant {#stay-relevant}
 To deepen my understanding about how distributed systems work, I explore a bit about the `RAFT` consensus algorithm that powers `etcd` which is one of the main components of kubernetes. I even deepen my knowledge by rebuilding distributed redis by implementing another common distributed system technique called the consistent hashing of the hash ring. Reinventing the wheel is not bad after all.
-There is no way we don’t talk about AI these days, One of our recent projects involved is automatic code reviews. To solve this, we built a simple automation workflow using `n8n` and the `Gemini LLM` as the central brain to analyze code, flag issues. Even though n8n is not considered true agentic, it still works for our use cases and even we are confident enough to auto-merge simple MR changes.
+
+Nowadays there is no way we don’t talk about AI, One of our recent projects involved is automatic code reviews. To solve this, we built a simple automation workflow using `n8n` and the `Gemini LLM` as the central brain to analyze code, flag issues. Even though n8n is not considered true agentic, it still works for our use cases and even we are confident enough to auto-merge simple MR changes.
 
 It's been an incredibly rewarding year. By layering security from the perimeter down to the individual workloads and embracing automation at every level from IaC and node management to CI/CD and security response we've built a platform that is not just efficient, but resilient and secure by design.
 
