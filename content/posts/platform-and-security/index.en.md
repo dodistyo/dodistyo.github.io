@@ -69,9 +69,9 @@ Nowadays there is no way we don’t talk about AI, One of our recent projects in
 It's been an incredibly rewarding year. By layering security from the perimeter down to the individual workloads and embracing automation at every level from IaC and node management to CI/CD and security response we've built a platform that is not just efficient, but resilient and secure by design.
 
 ### What’s next?
-{{< typeit group=paragraph >}}
-**More Cybersecurity and AI hands-on I guess . . .**
+{{< typeit group=jawaban >}}
+**More Cybersecurity and AI hands-on I guess . .**
 {{< /typeit >}}
-{{< typeit group=paragraph >}}
+{{< typeit group=jawaban >}}
 **And hopefully more writing**
 {{< /typeit >}}
