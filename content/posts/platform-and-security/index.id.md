@@ -65,7 +65,7 @@ Tahun ini benar-benar rewarding. Dari ngamanin perimeter sampai ke tiap workload
 
 ### Abis ini ngapain?
 {{< typeit group=jawaban >}}
-**Kayaknya makin banyak ngulik Cybersecurity dan AI...**
+**Kayaknya makin banyak ngulik Cybersecurity dan AI . . .**
 {{< /typeit >}}
 {{< typeit group=jawaban >}}
 **Dan semoga makin rajin nulis juga.**
