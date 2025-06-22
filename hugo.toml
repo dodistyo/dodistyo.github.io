@@ -316,3 +316,98 @@ languageName = "English"
     author = true
     # Site creation time
     since = 2025
+
+# Multilingual
+# 多语言
+[languages]
+  [languages.en]
+    weight = 1
+    languageCode = "en"
+    languageName = "English"
+    hasCJKLanguage = false
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        weight = 1
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Posts"
+        url = "/posts/"
+        title = ""
+      [[languages.en.menu.main]]
+        weight = 2
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Tags"
+        url = "/tags/"
+        title = ""
+      [[languages.en.menu.main]]
+        weight = 3
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Categories"
+        url = "/categories/"
+        title = ""
+    [languages.en.params]
+      [languages.en.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 4000
+        placeholder = ""
+        maxResultLength = 10
+        snippetLength = 30
+        highlightTag = "em"
+        absoluteURL = false
+        [languages.en.params.search.algolia]
+          index = "index.en"
+          appID = "PASDMWALPK"
+          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+
+  [languages.id]
+    weight = 1
+    languageCode = "id"
+    languageName = "Bahasa Indonesia"
+    hasCJKLanguage = false
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+    [languages.id.menu]
+      [[languages.id.menu.main]]
+        weight = 1
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Postingan"
+        url = "/posts/"
+        title = ""
+      [[languages.id.menu.main]]
+        weight = 2
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Label"
+        url = "/tags/"
+        title = ""
+      [[languages.id.menu.main]]
+        weight = 3
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Kategori"
+        url = "/categories/"
+        title = ""
+    [languages.id.params]
+      [languages.id.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 4000
+        placeholder = ""
+        maxResultLength = 10
+        snippetLength = 30
+        highlightTag = "em"
+        absoluteURL = false
+        [languages.id.params.search.algolia]
+          index = "index.id"
+          appID = "PASDMWALPK"
+          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
