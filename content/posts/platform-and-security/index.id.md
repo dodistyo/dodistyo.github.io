@@ -63,7 +63,7 @@ Dan ya, sekarang siapa sih yang gak ngomongin AI. Salah satu proyek terbaru gue 
 
 Tahun ini benar-benar rewarding. Dari ngamanin perimeter sampai ke tiap workload, dan otomatisasi dari IaC sampai CI/CD — kita berhasil bangun platform yang nggak cuma efisien, tapi juga resilient dan aman dari desainnya.
 
-### Terus, abis ini apa?
+### Abis ini ngapain?
 {{< typeit group=jawaban >}}
 **Kayaknya makin banyak ngulik Cybersecurity dan AI...**
 {{< /typeit >}}
