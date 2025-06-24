@@ -25,4 +25,4 @@ Thumbs.db
 .vscode/
 .idea/
 *.code-workspace
-hugo_build.lock
+*hugo_build.lock
