@@ -18,16 +18,16 @@ comment:
   enable: true
 ---
 
-Oke, ini cerita dari orang yang udah nyemplung banget di dunia platform dan security. Ngebangun sesuatu, ngehancurin, ngamanin lagi, terus ngebenerin yang rusak. Ya, begitulah biasanya.  
+Oke, ini cerita dari orang yang udah cukup lama nyemplung di dunia platform dan security. Ngebangun sesuatu, ngacak-ngacakin, ngamanin, terus ngebenerin yang rusak. Ya, begitulah kurang lebih.  
 <!--more-->
 
 ## Menghubungkan dan Mengamankan Infrastruktur Hybrid {#connect-and-secure-infra}
 
-Sekarang dunia IT tuh berputar di infrastruktur hybrid — campuran antara data center di kantor, beberapa lokasi on-prem, dan workload di cloud (khususnya GCP). Tantangan pertama yang harus diselesaikan adalah mengamankan lalu lintas antar *environtment* itu.  
+Sekarang dunia IT tuh kita harus berhadapan dengan infrastruktur hybrid. campuran antara data center, beberapa on-prem di site, dan workload di cloud (khususnya GCP). Tantangan pertama yang harus diselesaikan adalah mengamankan lalu lintas antar *environtment* itu.  
 
 Buat nyambungin dan ngamanin traffic **north-south** (antar *environment*), kita pakai firewallnya `FortiGate` dan fitur SD-WAN-nya. Solusi ini bisa nyatuin semua site, termasuk cloud, jadi satu jaringan privat dan aman.  
 
-Terus buat aplikasi yang menghadap ke publik, kita pilih `FortiWeb` sebagai WAF-nya. Alasannya? Karena kita butuh solusi WAF yang bisa ngamanin aplikasi cloud sekaligus yang ada di on-prem juga. Kita pasang ini di GCP pakai lisensi PAYG biar fleksibel buat scaling dan budgeting. Supaya makin andal, kita deploy dalam mode High Availability (HA) dengan instance Active-Active. Memang biayanya jadi dobel, tapi ya itu harga yang harus dibayar buat sistem yang bisa diandalkan.  
+Terus buat aplikasi yang diakses dari publik, kita pake `FortiWeb` sebagai WAF-nya. Alasannya? Karena kita butuh solusi WAF yang bisa ngamanin aplikasi cloud sekaligus yang ada di on-prem juga. Kita pasang ini di GCP pakai lisensi PAYG biar fleksibel buat scaling dan budgeting. Supaya makin andal, kita deploy dalam mode High Availability (HA) dengan instance Active-Active. Memang biayanya jadi dobel, tapi ya itu harga yang harus dibayar buat sistem yang bisa diandalkan.  
 
 Setelah itu, kita fokus ke pengamanan traffic **dalam** Kubernetes cluster (traffic east-west). Strateginya ada dua: enkripsi dan kontrol akses.
 
