@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 100
 title: "Platform Engineering And Cyber Security Stories"
 date: 2025-06-20T19:37:00+07:00
 lastmod: 2025-06-20T19:37:00+07:00
@@ -11,7 +11,7 @@ images: []
 resources:
 - name: "featured-image"
   src: "featured-image.png"
-tags: ["security", "platform", "devops"]
+tags: ["security", "platform", "devops", "beginner"]
 categories: ["security", "platform"]
 hiddenFromHomePage: false
 comment:

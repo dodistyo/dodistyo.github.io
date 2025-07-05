@@ -11,7 +11,7 @@ images: []
 resources:
 - name: "featured-image"
   src: "featured-image.png"
-tags: ["security", "platform", "devops"]
+tags: ["security", "platform", "devops", "pemula"]
 categories: ["security", "platform"]
 hiddenFromHomePage: false
 comment:
