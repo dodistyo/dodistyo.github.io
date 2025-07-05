@@ -70,4 +70,5 @@ It's been an incredibly rewarding year. By layering security from the perimeter 
 
 ### What’s next?
 **More Cybersecurity and AI hands-on I guess . .**
+
 **And hopefully more writing**
