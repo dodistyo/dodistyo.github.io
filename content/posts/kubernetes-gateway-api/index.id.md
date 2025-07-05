@@ -5,7 +5,7 @@ date: 2025-07-05T00:00:00+07:00
 lastmod: 2025-07-05T00:00:00+07:00
 draft: false
 author: "Dodi"
-description: "A walkthrough on exposing Kubernetes services using NodePort, LoadBalancer, Ingress, and the modern Gateway API."
+description: "Panduan santai buat ngeakses layanan Kubernetes pakai NodePort, LoadBalancer, Ingress, dan Gateway API versi terbaru."
 images: []
 resources:
 - name: "featured-image"
@@ -86,7 +86,7 @@ Walaupun tipe service `LoadBalancer` biasanya otomatis bikin cloud load balancer
 
 Kalau lu udah mentok dengan ingress, tenang aja Kubernetes udah berkembang dan sekarang ada solusi barunya!
 
-## Kenalan dengan Kubernetes Gateway API
+## Kenalan Dengan Kubernetes Gateway API
 
 Sekarang kenalan yuk sama **Kubernetes Gateway API** (jangan salah paham sama API Gateway, penjelasannya bisa lu baca di [sini](https://gateway-api.sigs.k8s.io/#whats-the-difference-between-gateway-api-and-an-api-gateway)).
 
