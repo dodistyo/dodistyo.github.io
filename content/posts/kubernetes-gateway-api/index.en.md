@@ -131,7 +131,7 @@ Let's deploy our [example services](https://github.com/dodistyo/kivotos/tree/mai
 
 ![Manifest](/demo-services.png)
 
-Now let's deploy our gateway api [resources](),  we need to setup ``GatewayClass`` and ``Gateway`` resources for our Gateway API platform configurations.
+Now let's deploy our gateway api [resources](https://github.com/dodistyo/kivotos/blob/main/base/platform/setup/gateway-api.yaml),  we need to setup ``GatewayClass`` and ``Gateway`` resources for our Gateway API platform configurations.
 We apply it on namespace ``platform``
 
 ```yaml
@@ -199,7 +199,7 @@ spec:
             group: ""
 ```
 
-Then we apply resources for mapping and routing our demo services.
+Then we apply resources for mapping and [routing](https://github.com/dodistyo/kivotos/blob/main/base/application/demo/routes.yaml) our demo services.
  - ``ReferenceGrant``:  We need this to grant access to our gateway api, because our gateway api platform resources are in the different namespace as our gateway resources for mapping and routing our services
  - ``TCPRoute`` and ``UDPRoute``:  For routing to our tcp/udp server
  - Two ``HTTPRoute``:  For routing to our http server, the other one is just for https redirection.

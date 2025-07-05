@@ -126,7 +126,7 @@ Sekarang kita deploy [contoh service](https://github.com/dodistyo/kivotos/tree/m
 
 ![Manifest](/demo-services.png)
 
-Sekarang kita deploy resource Gateway API kita. Kita perlu setup `GatewayClass` dan `Gateway` sebagai konfigurasi platform Gateway API kita.
+Sekarang kita deploy [resources](https://github.com/dodistyo/kivotos/blob/main/base/platform/setup/gateway-api.yaml) Gateway API kita. Kita perlu setup `GatewayClass` dan `Gateway` sebagai konfigurasi platform Gateway API kita.
 
 Kita apply ini di namespace `platform`.
 
@@ -195,7 +195,7 @@ spec:
             group: ""
 ```
 
-Sekarang kita apply resource buat mapping dan routing service demo kita.
+Sekarang kita apply resource buat mapping dan [routing](https://github.com/dodistyo/kivotos/blob/main/base/application/demo/routes.yaml) service demo kita.
 
 - **ReferenceGrant**: Ini kita butuhin buat ngasih akses ke Gateway API kita, soalnya resource platform Gateway API-nya ada di namespace yang beda sama resource buat mapping dan routing service-nya.
 - **TCPRoute & UDPRoute**: Dipake buat routing ke server TCP/UDP kita.
