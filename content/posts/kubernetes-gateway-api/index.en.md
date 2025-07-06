@@ -47,9 +47,9 @@ For on-premise or self setup kubernetes? You’re gonna need additional platform
 ## Kubernetes Ingress
 
 Service type LoadBalancer is good, and there is an even better way to expose your service by leveraging service type LoadBalancer and putting some kind of reverse proxy on top of your services.  
-Yeay! Now you get to know the kubernetes ingress controller, and you start to deploy your first ingress controller.
+Yeay! Now you get to know the kubernetes ingress, and then you start to deploy your first ingress controller.
 
-The most commonly used ingress controller would be the **ingress-nginx** (not to be confused with **nginx-ingress**, because those two are different project). There is also another controller called **emissary-ingress** which is an already graduated project from CNCF, it's using envoy proxy as its dataplane and it offers more advanced features that you could also consider.
+The most commonly used ingress controller would be the **ingress-nginx** (not to be confused with **nginx-ingress**, because those two are different project). There is also another controller like **emissary-ingress** for example. Which is an already graduated project from CNCF, it's using envoy proxy as its dataplane and it offers more advanced features that you could also consider.
 
 
 ## Kubernetes Ingress Limitations

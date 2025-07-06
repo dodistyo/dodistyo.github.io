@@ -48,9 +48,9 @@ Kalau lu pake Kubernetes yang di-setup sendiri (on-premise)? lu butuh tool tamba
 
 ## Kubernetes Ingress
 
-Tipe service `LoadBalancer` udah bagus, tapi ternyata ada cara yang lebih canggih buat nge-expose service lu. pada dasarnya sama aja kaya lu pake `LoadBalancer` plus pakein reverse proxy juga di depan service-service lu.
+Tipe service `LoadBalancer` udah bagus, tapi ternyata ada cara yang lebih oke buat nge-expose service lu. pada dasarnya sama aja kaya lu pake `LoadBalancer` plus pakein reverse proxy juga di depan service-service lu.
 
-Yeay! lu mulai kenal deh sama Kubernetes ingress controller, dan lu mulai coba deploy controller pertamalu.
+Yeay! lu mulai kenal deh sama Kubernetes Ingress, dan lu mulai coba deploy salah satu controllernya.
 
 Ingress controller yang paling umum dipake biasanya **ingress-nginx** (jangan sampai ketuker sama **nginx-ingress**, soalnya itu dua proyek yang berbeda). Ada juga controller lain kayak **emissary-ingress**, proyek yang udah graduate dari CNCF, yang pake envoy proxy sebagai dataplane dan punya fitur-fitur lebih advance yang layak lu pertimbangkan juga.
 
