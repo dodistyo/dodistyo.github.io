@@ -16,7 +16,13 @@ languageCode = "en"
 
 languageName = "English"
 
-# whether to enable multilingual support
+# rorbot.txt configuration
+[outputFormats.RobotsTXT]
+  mediaType = "text/plain"
+  baseName = "robots"
+  isPlainText = true
+  notAlternative = true
+  permalinkable = false
 [outputs]
   home = [ "HTML", "RSS", "RobotsTXT" ]
 
