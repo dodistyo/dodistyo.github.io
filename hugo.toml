@@ -30,7 +30,7 @@ languageName = "English"
 notAlternative = true
 
 [outputs]
-  home = [ "HTML", "RSS", "RobotsTXT", "Setemap" ]
+  home = [ "HTML", "RSS", "RobotsTXT", "Sitemap" ]
 
 # Menu config
 
