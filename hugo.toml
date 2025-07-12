@@ -16,6 +16,10 @@ languageCode = "en"
 
 languageName = "English"
 
+# whether to enable multilingual support
+[outputs]
+  home = [ "HTML", "RSS", "RobotsTXT" ]
+
 # Menu config
 
 [menu]
