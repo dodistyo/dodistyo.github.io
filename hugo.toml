@@ -342,6 +342,7 @@ languageName = "English"
     languageCode = "en"
     languageName = "English"
     hasCJKLanguage = false
+    outputs = ["HTML", "RSS", "Sitemap", "RobotsTXT"]
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [languages.en.menu]
       [[languages.en.menu.main]]
@@ -388,6 +389,7 @@ languageName = "English"
     languageCode = "id"
     languageName = "Bahasa Indonesia"
     hasCJKLanguage = false
+    outputs = ["HTML", "RSS", "Sitemap", "RobotsTXT"]
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
     [languages.id.menu]
       [[languages.id.menu.main]]
