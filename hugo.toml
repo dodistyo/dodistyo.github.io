@@ -23,11 +23,12 @@ languageName = "English"
   isPlainText = true
   notAlternative = true
   permalinkable = false
+  
 [outputFormats.Sitemap]
   mediaType = "application/xml"
   baseName = "sitemap"
   isPlainText = false
-notAlternative = true
+  notAlternative = true
 
 [outputs]
   home = [ "HTML", "RSS", "RobotsTXT", "Sitemap" ]
