@@ -11,6 +11,8 @@ title = "dodistyo"
 # language code ["en", "zh-CN", "fr", "pl", ...]
 
 languageCode = "en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 
 # language name ["English", "简体中文", "Français", "Polski", ...]
 
@@ -377,7 +379,7 @@ languageName = "English"
           searchKey = "b42948e51daaa93df92381c8e2ac0f93"
 
   [languages.id]
-    weight = 1
+    weight = 2
     languageCode = "id"
     languageName = "Bahasa Indonesia"
     hasCJKLanguage = false
