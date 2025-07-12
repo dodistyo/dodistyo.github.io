@@ -11,8 +11,6 @@ title = "dodistyo"
 # language code ["en", "zh-CN", "fr", "pl", ...]
 
 languageCode = "en"
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
 
 # language name ["English", "简体中文", "Français", "Polski", ...]
 
@@ -25,8 +23,14 @@ languageName = "English"
   isPlainText = true
   notAlternative = true
   permalinkable = false
+[outputFormats.Sitemap]
+  mediaType = "application/xml"
+  baseName = "sitemap"
+  isPlainText = false
+notAlternative = true
+
 [outputs]
-  home = [ "HTML", "RSS", "Sitemap", "RobotsTXT" ]
+  home = [ "HTML", "RSS", "RobotsTXT", "Setemap" ]
 
 # Menu config
 
