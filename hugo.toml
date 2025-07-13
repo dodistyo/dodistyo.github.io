@@ -33,6 +33,17 @@ languageName = "English"
 
 [outputs]
   home = [ "HTML", "RSS", "RobotsTXT", "Sitemap" ]
+  section = ["HTML", "RSS", "SITEMAP"]
+  page = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
+[sitemap]
+  changeFreq = 'weekly'
+  disable = false
+  filename = 'sitemap.xml'
+  priority = -1
+
 
 # Menu config
 
