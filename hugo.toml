@@ -38,13 +38,6 @@ languageName = "English"
   taxonomy = ["HTML"]
   term = ["HTML"]
 
-[sitemap]
-  changeFreq = 'weekly'
-  disable = false
-  filename = 'sitemap.xml'
-  priority = -1
-
-
 # Menu config
 
 [menu]
