@@ -122,11 +122,11 @@ Gue juga udah setup hostname custom `app.me` biar langsung ngarah ke service Gat
 
 ### Deploymen Resource
 
-Sekarang kita deploy [contoh service](https://github.com/dodistyo/kivotos/tree/main/base/application/demo/services) yang terdiri dari service TCP/UDP, HTTP, dan gRPC.
+Sekarang kita deploy [contoh service](https://github.com/dodistyo/kivotos/tree/poc/gateway-api/base/application/demo/services) yang terdiri dari service TCP/UDP, HTTP, dan gRPC.
 
 ![Manifest](/demo-services.png)
 
-Sekarang kita deploy [resources](https://github.com/dodistyo/kivotos/blob/main/base/platform/setup/gateway-api.yaml) Gateway API kita. Kita perlu setup `GatewayClass` dan `Gateway` sebagai konfigurasi platform Gateway API kita.
+Sekarang kita deploy [resources](https://github.com/dodistyo/kivotos/blob/poc/gateway-api//base/platform/setup/gateway-api.yaml) Gateway API kita. Kita perlu setup `GatewayClass` dan `Gateway` sebagai konfigurasi platform Gateway API kita.
 
 Kita apply ini di namespace `platform`.
 
@@ -195,7 +195,7 @@ spec:
             group: ""
 ```
 
-Sekarang kita apply resource buat mapping dan [routing](https://github.com/dodistyo/kivotos/blob/main/base/application/demo/routes.yaml) service demo kita.
+Sekarang kita apply resource buat mapping dan [routing](https://github.com/dodistyo/kivotos/blob/poc/gateway-api//base/application/demo/routes.yaml) service demo kita.
 
 - **ReferenceGrant**: Ini kita butuhin buat ngasih akses ke Gateway API kita, soalnya resource platform Gateway API-nya ada di namespace yang beda sama resource buat mapping dan routing service-nya.
 - **TCPRoute & UDPRoute**: Dipake buat routing ke server TCP/UDP kita.
