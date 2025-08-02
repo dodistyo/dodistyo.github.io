@@ -13,7 +13,7 @@ Do you enjoy setting up a development environment each time you switch devices?
 
 Well, I don't...
 
-Setting up workspace is a tedious work, especially when you got a new device or just want to switch for a device.
+Setting up workspace is a tedious work, especially when you got a new device or just simply want to switch for another device.
 <!--more-->
 It could take hours or even days to set everything up, install all of the necessary tooling, and set up the IDE and its extensions.
 
