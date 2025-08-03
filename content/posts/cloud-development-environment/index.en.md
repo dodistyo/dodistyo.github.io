@@ -18,7 +18,7 @@ Setting up workspace is a tedious work, especially when you got a new device or 
 It could take hours or even days to install all of the necessary tooling, and set up the IDE and its extensions.
 
 If you're a psycho, you'll probably be using
-neovim with 500+ lines of init.lua, custom LSP, treesitter, and a Tokyo Night colorscheme. Keyboard shortcuts so advanced even you forget them. Brags about how you wrote your own plugin manager or something...
+neovim as your IDE with 500+ lines of init.lua, custom LSP, treesitter, and a Tokyo Night colorscheme. Keyboard shortcuts so advanced even you forget them. Brags about how you wrote your own plugin manager or something...
 
 But of course, you are a normal person, so you use VSCode instead.
 Installing it in your desktops is pretty quick. and if you're on linux with zsh as your shell terminal, it will surely increase your productivity.
