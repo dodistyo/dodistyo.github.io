@@ -21,8 +21,10 @@ If you're a psycho, you'll probably be using
 neovim as your IDE with 500+ lines of init.lua, custom LSP, treesitter, and a Tokyo Night colorscheme. Keyboard shortcuts so advanced even you forget them. Brags about how you wrote your own plugin manager or something...
 
 But of course, you are a normal person, so you use VSCode instead.
-Installing it in your desktops is pretty quick. and if you're on linux with zsh as your shell terminal, it will surely increase your productivity.
+Installing it in your desktop is pretty simple and quick. Setting up VSCode extensions is usually on the go.
+If you're on linux or mac, maybe using zsh as your shell terminal is a good choice, as it will surely increase your productivity.
 but in Windows, you need to properly set up your wsl first before you can use zsh.
+And you still need to install a bunch of other tooling to support your work. 
 Could you imagine if you switch devices often? keeping your workspace state the same across devices is not easy, right?
 Now you're thinking... and then realize that VSCode is actually built with JavaScript.
 Since it is built with JS, it should be possible to run it in the browser, right?
