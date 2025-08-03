@@ -2,7 +2,7 @@ relativeURLs = true
 
 canonifyURLs = false
 
-baseURL = "/"
+baseURL = ""
 
 enableRobotsTXT = true
 # Change the default theme to be use when building the site with Hugo
@@ -342,6 +342,9 @@ languageName = "English"
     author = true
     # Site creation time
     since = 2025
+  
+  # [params.page.library.js]
+  #   livereload = "https://coder.common.ihc.id/@dodiprasetyo/DevOps.main/apps/code-server/proxy/1313/livereload.js?mindelay=10&v=2&port=443&path=wss%3A%2F%2Fcoder.common.ihc.id%2F%40dodiprasetyo%2FDevOps.main%2Fapps%2Fcode-server%2Fproxy%2F1313%2Flivereload"
 
 # Multilingual
 # 多语言
