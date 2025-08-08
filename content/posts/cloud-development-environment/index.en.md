@@ -16,7 +16,7 @@ Do you enjoy setting up a development environment each time you switch devices?
 
 Well, I don't...
 
-Setting up workspace is a tedious work, especially when you got a new device or just simply often switching for devices.
+Setting up workspace can be tedious, especially when you got a new device or just simply often switching for devices.
 <!--more-->
 It could take hours or even days to install all of the necessary tooling, and set up the IDE and its extensions.
 
@@ -24,12 +24,11 @@ If you're a psycho, you'll probably be using
 neovim as your IDE with 500+ lines of init.lua, custom LSP, treesitter, and a Tokyo Night colorscheme. Keyboard shortcuts so advanced even you forget them. Brags about how you wrote your own plugin manager or something...
 
 But of course, you are a normal person, so you use VSCode instead.
-Installing it in your desktop is pretty simple and quick. Setting up VSCode extensions is usually on the go.
+Installing it in your desktop is pretty simple and quick. Setting up VSCode extensions is usually on the go too.
 If you're on linux or mac, maybe using zsh as your shell terminal is a good choice, as it will surely increase your productivity.
-but in Windows, you need to properly set up your wsl first before you can use zsh.
+On Windows, though, you’ll need to set up WSL first to use zsh smoothly.
 And you still need to install a bunch of other tooling to support your work. 
-Could you imagine if you switch devices often? keeping your workspace state the same across devices is not an easy task?
-
+Could you imagine if you switch devices often? keeping your workspace consistent across devices is not an easy task.
 
 Now you're thinking...
 
@@ -64,7 +63,7 @@ In this blog, we'll take a look at the opensource project called `Coder`. Coder 
 By the way, coder team is also the maintainer of the code-server project. and code-server is part of the coder component.
 
 ##  Kubernetes as CDE Orchestrator
-By levereging the dynamic and the robustness of kubernetes, we'll get a strong platform to host your CDE manager and it's workspace data plane.
+By leveraging the dynamic and the robustness of kubernetes, we'll get a strong platform to host your CDE manager and it's workspace data plane.
 We will provision the coder controller first, then we will create a workspace template so users can use the template and spawn their workspace dynamically on demand.
 
 Before we do the demo, here are some coder OSS key features:
@@ -660,17 +659,17 @@ Just like a GitHub Codespace, right?
 
 ## The Takeaways
 ### Benefits
-- Full software development experience from within your browser
-- Using Terraform IaC as its workspace scaffolding
+- Full Dev Experience, All tools available right in your browser.
+- Terraform-based Workspaces, Consistent setup via Infrastructure as Code.
+- Unified Developer Setup, Same environment across the team (including presetup IDE extension and config).
 - Using container image for the workspace, so we can basically bake our own image and install all necessary tools in it.
 - Since it runs on top of kubernetes, we can leverage the kubernetes dynamics for managing workspace. such as scaling down to zero.
 - No high end PC required to write codes since all of the workspces will be run on the cloud
-- Unified and standardize workspace accross developers (including presetup IDE extension and config)
-### Challange & Improvement
+### Challenge & Improvement
 - Could we run container inside the workspace?
 we could actually, but a bit tricky, complex and unsecure if you don't do it right.
 - It may break your app sometimes if your apps don't support to work behind proxy
 - Native mobile and desktop development? I honestly don't know if it's possible.
-- Do all VSCodes extentions works? Not all, but most of it works.
+- Do all VSCodes extensions works? Not all, but most of it works.
 - If it is hosted in the managed kubernetes on cloud provider, we can use Spot VMs or Preemptible VMs to cut down cost even more. (up to 80% cheaper)
 - Build your own custom image, if you need to install package/tools that is small or light, you can add the installation step in workspace startup script without rebuilding your custom image.
