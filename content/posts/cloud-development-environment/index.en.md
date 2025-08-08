@@ -7,6 +7,9 @@ author: "Dodi Prasetyo"
 description: "A casual exploration into cloud development environments and browser-based IDE."
 tags: ["Development Environment", "Cloud IDE", "VSCode", "Kubernetes"]
 categories: ["Dev Experience", "Platform"]
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 ---
 
 Do you enjoy setting up a development environment each time you switch devices?
