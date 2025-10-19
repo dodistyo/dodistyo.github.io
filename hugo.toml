@@ -99,7 +99,8 @@ languageName = "English"
 # Markup related configuration in Hugo
 
 [markup]
-
+  [markup.goldmark.renderer]
+    unsafe = true
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
 
   [markup.highlight]
