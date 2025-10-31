@@ -1,5 +1,5 @@
 ---
-title: "Running Open Models on Consumer-Grade GPUs"
+title: "Running Open-Weight Models On A Single Consumer-Grade GPUs"
 subtitle: "How image generation and LLMs can boost productivity – and why running them locally matters"
 date: 2025-10-19T00:00:00+07:00
 lastmod: 2025-10-19T00:00:00+07:00
@@ -14,19 +14,21 @@ description: "Why running open-source AI models locally on consumer GPUs can sav
 
 For years, the biggest language and vision systems were locked behind corporate APIs — from OpenAI, Antrhopic, Google etc.
 
-Then DeepSeek came in. DeepSeek, one of the pioneers in opensource model space. a relatively unknown AI research lab from China, released an open source model that’s quickly become the talk. On many metrics that matter — capability, cost, openness ― DeepSeek is giving Western AI giants a run for their money.
+Then DeepSeek came in. DeepSeek, one of the pioneers in open model space. a relatively unknown AI research lab from China, released an open source model that’s quickly become the talk back then. On many metrics that matter — capability, cost, openness ― DeepSeek is giving Western AI giants a run for their money.
 
 Open-source trained models like **DeepSeek**, **Qwen**, **Mistral** ,  **Stable Diffusion**, **Flux** and etc have changed the game — giving us the ability to experiment, fine-tune, and run powerful models completely offline in our local setup.
 
-Today, even **consumer-grade GPUs** from NVDIA or AMD are capable of running these models efficiently — powering real workflows and boost our productivity.
+Today, even **consumer-grade GPUs** from NVDIA or AMD are capable of running these models efficiently — powering real workflows and boost our productivity. Even this article is writing is refined by open weight model GPT OSS 20B.
+
+But how feasible it actually is? We'll see through this articles
 
 ---
 
-## Two AI Categories That We Are Going To Talk About
+## Two AI Categories That We Are Going To Have A Play With
 
 | Category | Typical Use Cases | How It Boosts Productivity |
 |-----------|------------------|-----------------------------|
-| **Image Generation** (Flux, Stable Diffusion) | Marketing creatives, Content Creation, Product design and etc. | Generates high-quality assets in seconds, reducing design iteration time. |
+| **Image Generation** (Flux, Stable Diffusion) | Marketing creatives, Content Creation, Product design, editing and etc. | Generates high-quality assets in seconds, reducing design iteration time. |
 | **Large Language Models (LLMs)** (DeepSeek, Qwen, GPT-OSS) | Agentic Coding, Content Writing, Text Summarization and etc. | Cuts developer hours, automates repetitive writing, and enables unlimited knowledge retrieval. |
 
 > 💡 Both categories can now run comfortably on a **single GPU** wether it's **NVIDIA with its CUDA or AMD with its ROCm**.
@@ -37,11 +39,11 @@ Today, even **consumer-grade GPUs** from NVDIA or AMD are capable of running the
 
 | Aspect | Open-Source Models | Closed / Proprietary Models |
 |---------|-------------------|------------------------------|
-| **Model Size** | Smaller (7–30 B params) or quantized (4-bit) for consumer GPUs | Larger (>30 B), often need TPUs or 80 GB+ GPUs |
-| **Performance** | Not the same as Proprietary but still feasible for day to day task | Highest benchmark score, more performant |
-| **Latency** | Low (runs locally) | Network delays & API queues |
-| **Cost** | Zero inference cost | Pay-per-use, scales with usage |
+| **Cost** | Zero inference cost (only electricity) | Pay-per-use, scales with usage |
 | **Data Privacy** | 100 % local; no leaks | Cloud-hosted; vendor policies apply |
+| **Model Size** | Smaller (7–30 B params) or quantized (4-bit) for consumer GPUs | Larger (>30 B), often need TPUs or 80 GB+ GPUs |
+| **Performance** | Not as good as Proprietary but still feasible | Highest benchmark score, more performant |
+| **Latency** | Low (runs locally) | Network delays & API queues |
 
 > In many workflows, a well-tuned open model on an consumer GPU can **replace paid APIs** — especially when privacy and cost control matter.
 
