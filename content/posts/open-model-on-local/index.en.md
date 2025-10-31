@@ -10,7 +10,7 @@ categories: ["Artificial Intelligence"]
 description: "Why running open-source AI models locally on consumer GPUs can save costs, boost privacy, and accelerate workflows."
 ---
 
-## Why the Hype Around “Open-Source” AI Models, And What Can We Do With It?
+## Why the Hype Around Open Models And What Can We Do With It?
 
 For years, the biggest language and vision systems were locked behind corporate APIs — from OpenAI, Antrhopic, Google etc.
 
