@@ -2,7 +2,7 @@ relativeURLs = true
 
 canonifyURLs = false
 
-baseURL = ""
+baseURL = "http://1313--main--devops--dodiprasetyo.coder.common.ihc.id/"
 
 enableRobotsTXT = true
 # Change the default theme to be use when building the site with Hugo

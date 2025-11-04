@@ -10,15 +10,17 @@ categories: ["Artificial Intelligence"]
 description: "Why running open-source AI models locally on consumer GPUs can save costs, boost privacy, and accelerate workflows."
 ---
 
-## Why the Hype Around Open Models And What Can We Do With It?
+## Why Open Models?
 
 For years, the biggest language and vision systems were locked behind corporate APIs — from OpenAI, Antrhopic, Google etc.
 
 Then DeepSeek came in — DeepSeek is one of the pioneers in open model space. a relatively unknown AI research lab from China, released an open source model that quickly become the talk back then. On many metrics that matter — capability, cost, openness ― DeepSeek is giving Western AI giants a run for their money.
 
-Open-source trained models like **DeepSeek**, **Qwen**, **Mistral** ,  **Stable Diffusion**, **Flux** and etc have changed the game — giving us the ability to experiment, fine-tune, and run powerful models completely offline in our local setup.
+Open-source trained models like **DeepSeek**, **Qwen**, **Mistral** ,  **Stable Diffusion**, **Flux** and many more coming have changed the game — giving us the ability to experiment, fine-tune, and run powerful models completely offline in our local setup.
 
-Today, even **consumer-grade GPUs** from NVDIA or AMD is capable of running these models efficiently — powering real workflows and boost our productivity. Even this article is writing is refined by open weight model GPT OSS 20B.
+Today, even **consumer-grade GPUs** from NVDIA or AMD is capable of running these models efficiently — powering real workflows and boost our productivity.
+
+Even this article writing is refined by open weight model GPT OSS 20B.
 
 But how feasible it actually is? We'll see through this articles
 
@@ -60,7 +62,7 @@ But how feasible it actually is? We'll see through this articles
 
 ---
 > 💡 
-These demo below haave been done on a consumer GPU with 24GB VRAM
+These playground below use consumer GPU with 24GB VRAM
 
 ## Image Generation
 
@@ -70,26 +72,29 @@ These demo below haave been done on a consumer GPU with 24GB VRAM
 - Model: Flux Dev 1 FP8
 - Model Size: 17.2GB
 
-**Prompt:**
-```markdown
+{{< admonition type=note title="Prompt" open=false >}}
 Ultra realistic photography, natural skin tones, daylight, cinematic composition, vibrant colors, Three Indonesian friends, standing together with their arms around each other’s shoulders, smiling warmly. They are casually dressed in everyday clothes, representing authentic Indonesian youth. Behind them rises Mount Merapi, majestic and slightly smoking under a bright blue sky. The atmosphere feels friendly, natural, symbolizing friendship and togetherness. Soft natural lighting, high detail, shallow depth of field.
-```
+{{< /admonition >}}
 
-![Manifest](/Flux_Dev_1_FP8.png)
+
+{{< image src="/Flux_Dev_1_FP8.png" caption="Flux Dev 1 FP8" >}}
 
 ### Image editing with Flux Kontext
 - Tools: ComfyUI
 - Model: Flux Dev 1 Kontext Q6
 - Model Size: 9.8GB
 
-**Prompt:**
-```markdown
+{{< admonition type=note title="Prompt" open=false >}}
 Remove the black sling bag in his chest, and add glasses that blends well
-```
-![Manifest](/Flux_Dev_1_Kontext_Q6.png)
+{{< /admonition >}}
+
+{{< image src="/Flux_Dev_1_Kontext_Q6.png" caption="Flux Dev 1 Kontext Q6 Workflow" >}}
+
+
 
 **Another Flux Kontext example result:**
-![Manifest](/Dev.1.png)
+
+{{< image src="/Dev.1.png" caption="Flux Dev 1 Kontext Q6 Output" >}}
 
 ### Generating Brand Logo using Flux Dev 1 and LoRa
 - Tools: ComfyUI
@@ -97,28 +102,47 @@ Remove the black sling bag in his chest, and add glasses that blends well
 - Model Size: 17.2GB
 - LoRa Model: LoRa logo design
 
-**Prompt:**
-```markdown
-Remove the black sling bag in his chest, and add glasses that blends well
-```
+{{< admonition type=note title="Prompt" open=false >}}
+wablogo, minimalist, four leafed clover, logo
+{{< /admonition >}}
 
-![Manifest](/Flux_Dev_1_LoRa_Logo.png)
+{{< image src="/Flux_Dev_1_LoRa_Logo.png" caption="Flux Dev 1 FP8 + Logo LoRa Workflow" >}}
 
 **Another LoRa logo design example result:**
 
-![Manifest](/Logo.png)
+{{< image src="/Logo.png" caption="Flux Dev 1 FP8 + Logo LoRa Output" >}}
 
 ## LLM for Agentic coding
+There are a lot of open-weight LLMs trained specifically for coding  —  like QWEN 3 Coder and DeepSeek Coder.
+they also have multiple model size variant, but of course smaller model version will not perform as good as model that run in a full precisions. To measure how capable a Large Language Model (LLM) is, the AI community uses standard benchmarks — shared evaluation tasks that allow fair comparison between models. These benchmarks test how well models understand, reason, and generate text across different domains.
 
+One of the most significant modern benchmarks for LLMs — especially those aimed at software engineering — is SWE-Bench.
+
+**What it is:**
+
+SWE-Bench evaluates how well an LLM can understand, modify, and fix real-world codebases based on GitHub issues and pull requests.
+In other words, instead of toy coding problems, it uses actual bugs and features from popular open-source repositories.
+
+**Why it matters:**
+
+It tests end-to-end reasoning — from reading a bug report to editing multiple files, ensuring the code compiles, and passing unit tests.
+This makes it a practical measure of how close an LLM is to acting like a real software engineer.
+
+**Impact:**
+
+SWE-Bench has become the gold standard for assessing LLMs’ software engineering ability.
+Recent high-performing models like GPT-4, Claude 3.5, and Gemini 1.5 Pro are often benchmarked using SWE-Bench to show real coding competence, not just text generation skills.
+
+Let's infer the best open weigh model available that we could run on **single consumer grade GPU**.
+Based on the SWE Bench verified, Devstral is scoring about 53%.
 ### Vibe Code
 - Agent: Openhands
 - Model: Devstral small 1.1 Q4
 - Model Size: 14GB
 
-**Prompt:**
-```markdown
+{{< admonition type=note title="Prompt" open=false >}}
 Let's implement auth mechanism, use JWT for authentications. make sure the implementation is following best practices and common pattern.
-```
+{{< /admonition >}}
 
 ![Manifest](/openhands.png)
 
