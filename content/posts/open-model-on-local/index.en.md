@@ -1,5 +1,5 @@
 ---
-title: "Running Open-Weight Models On A Single Consumer-Grade GPUs"
+title: "Running Open Weight Models On A Single Consumer Grade GPUs"
 subtitle: "How image generation and LLMs can boost productivity – and why running them locally matters"
 date: 2025-10-19T00:00:00+07:00
 lastmod: 2025-10-19T00:00:00+07:00
@@ -113,8 +113,8 @@ wablogo, minimalist, four leafed clover, logo
 {{< image src="/Logo.png" caption="Flux Dev 1 FP8 + Logo LoRa Output" >}}
 
 ## LLM for Agentic coding
-There are a lot of open-weight LLMs trained specifically for coding  —  like QWEN 3 Coder and DeepSeek Coder.
-they also have multiple model size variant, but of course smaller model version will not perform as good as model that run in a full precisions. To measure how capable a Large Language Model (LLM) is, the AI community uses standard benchmarks — shared evaluation tasks that allow fair comparison between models. These benchmarks test how well models understand, reason, and generate text across different domains.
+There are a lot of open-weight LLMs trained specifically for coding out there  —  like QWEN 3 Coder and DeepSeek Coder.
+they also have multiple model size variant, but of course smaller model version will not perform as good as model that run in a full precisions mode. To measure how capable a Large Language Model (LLM) is, the AI community uses standard benchmarks — shared evaluation tasks that allow fair comparison between models. These benchmarks test how well models understand, reason, and generate text across different domains.
 
 One of the most significant modern benchmarks for LLMs — especially those aimed at software engineering — is SWE-Bench.
 
@@ -131,10 +131,17 @@ This makes it a practical measure of how close an LLM is to acting like a real s
 **Impact:**
 
 SWE-Bench has become the gold standard for assessing LLMs’ software engineering ability.
-Recent high-performing models like GPT-4, Claude 3.5, and Gemini 1.5 Pro are often benchmarked using SWE-Bench to show real coding competence, not just text generation skills.
+Recent high-performing models like GPT-5, Claude Sonnet 4.5, and Gemini 2.5 Pro are often benchmarked using SWE-Bench to show real coding competence, not just text generation skills.
 
 Let's infer the best open weigh model available that we could run on **single consumer grade GPU**.
 Based on the SWE Bench verified, Devstral is scoring about 53%.
+
+Here are the good articles showing the case
+- https://openhands.dev/blog/devstral-a-new-state-of-the-art-open-model-for-coding-agents
+- https://mistral.ai/news/devstral-2507
+
+
+Now let's give it a try..
 ### Vibe Code
 - Agent: Openhands
 - Model: Devstral small 1.1 Q4
@@ -144,11 +151,11 @@ Based on the SWE Bench verified, Devstral is scoring about 53%.
 Let's implement auth mechanism, use JWT for authentications. make sure the implementation is following best practices and common pattern.
 {{< /admonition >}}
 
-![Manifest](/openhands.png)
+{{< image src="/openhands.png" caption="OpenHands CLI" >}}
 
-![Manifest](/openhands_result_1.png)
+{{< image src="/openhands_result_1.png" caption="Result" >}}
 
-![Manifest](/openhands_result_2.png)
+{{< image src="/openhands_result_2.png" caption="Final Output" >}}
 
 ---
 
