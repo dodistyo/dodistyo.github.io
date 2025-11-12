@@ -1,4 +1,5 @@
 ---
+weight: 99
 title: "Running Open Weight Models On A Single Consumer Grade GPUs"
 subtitle: "How image generation and LLMs can boost productivity – and why running them locally matters"
 resources:
