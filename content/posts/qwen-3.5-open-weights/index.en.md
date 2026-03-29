@@ -1,8 +1,8 @@
 ---
 title: "Qwen 3.5: Open Weights Closing the Gap to Proprietary Models"
 subtitle: "How the 27B and 35B-A3B variants are delivering frontier performance on consumer hardware"
-date: 2026-03-28T09:00:00+07:00
-lastmod: 2026-03-28T09:00:00+07:00
+date: 2026-03-29T16:51:00+07:00
+lastmod: 2026-03-29T16:51:00+07:00
 draft: false
 author: "Dodi Prasetyo"
 description: "Qwen 3.5 brings frontier LLM performance to consumer hardware with impressive benchmarks across its variants. Here's how the open-weight model stacks up against proprietary alternatives."
