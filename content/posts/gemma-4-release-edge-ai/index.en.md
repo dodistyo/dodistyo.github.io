@@ -11,8 +11,10 @@ tags: ["Edge AI", "LLM", "Gemma 4", "Multimodal AI", "On-Device Inference"]
 categories: ["Artificial Intelligence"]
 resources:
  - name: "featured-image"
-   src: "gemma-4-release.jpg"
+   src: "../gemma-4-banner.jpg"
 ---
+
+{{< figure src="../gemma-4-banner.jpg" alt="Gemma 4 Is Here — Google's Newest Open-Weight Models">}}
 
 # Gemma 4 Is Here — Google's Newest Open-Weight Models
 
