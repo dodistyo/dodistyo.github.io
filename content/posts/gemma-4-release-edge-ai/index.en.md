@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 99
 title: "Gemma 4 Is Here — Google's Newest Open-Weight Models"
 subtitle: "April 2, 2026. Multimodal. Apache 2.0. Ready for your device."
 date: 2026-04-04T17:30:00+07:00
@@ -11,12 +11,8 @@ tags: ["Edge AI", "LLM", "Gemma 4", "Multimodal AI", "On-Device Inference"]
 categories: ["Artificial Intelligence"]
 resources:
  - name: "featured-image"
-   src: "../gemma-4-banner.jpg"
+   src: "gemma-4-official.jpg"
 ---
-
-{{< figure src="../gemma-4-banner.jpg" alt="Gemma 4 Is Here — Google's Newest Open-Weight Models">}}
-
-# Gemma 4 Is Here — Google's Newest Open-Weight Models
 
 **Google DeepMind released Gemma 4 recently — April 2, 2026.**
 

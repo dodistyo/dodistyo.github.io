@@ -9,10 +9,8 @@ author: "Dodi Prasetyo"
 description: "Qwen 3.5 brings frontier LLM performance to consumer hardware with impressive benchmarks across its variants. Here's how the open-weight model stacks up against proprietary alternatives."
 tags: ["AI", "LLMs", "Open Source", "Qwen", "Intermediate"]
 categories: ["Artificial Intelligence", "LLMs"]
-image: "/images/ai-post-fallback.png"
+featuredImage: "/images/ai-post-fallback.png"
 ---
-
-{{< figure src="/images/ai-post-fallback.png" alt="Qwen 3.5 - Open-Weight LLMs on Consumer Hardware" >}}
 
 The open-weight LLM scene has been moving fast lately — but most of the noise is just bigger parameter counts chasing diminishing returns. What's actually interesting right now isn't about how massive a model can get, but how much capability we're packing into something that runs on consumer hardware.
 
