@@ -1,6 +1,6 @@
 ---
 weight: 99
-title: "Qwen 3.5: Open Weights Closing the Gap to Proprietary Models"
+title: "Meet Qwen 3.5. Your Local AI Just Got Serious."
 subtitle: "How the 27B and 35B-A3B variants are delivering frontier performance on consumer hardware"
 date: 2026-03-29T16:51:00+07:00
 lastmod: 2026-03-29T16:51:00+07:00
@@ -9,7 +9,9 @@ author: "Dodi Prasetyo"
 description: "Qwen 3.5 brings frontier LLM performance to consumer hardware with impressive benchmarks across its variants. Here's how the open-weight model stacks up against proprietary alternatives."
 tags: ["AI", "LLMs", "Open Source", "Qwen", "Intermediate"]
 categories: ["Artificial Intelligence", "LLMs"]
-featuredImage: "/images/ai-post-fallback.png"
+resources:
+ - name: "featured-image"
+   src: "qwen.png"
 ---
 
 The open-weight LLM scene has been moving fast lately — but most of the noise is just bigger parameter counts chasing diminishing returns. What's actually interesting right now isn't about how massive a model can get, but how much capability we're packing into something that runs on consumer hardware.
