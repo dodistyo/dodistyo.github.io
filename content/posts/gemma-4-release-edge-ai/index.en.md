@@ -1,6 +1,6 @@
 ---
 weight: 99
-title: "Gemma 4 Is Here — Google's Newest Open-Weight Models"
+title: "Gemma 4 Is Here - Google's Newest Open-Weight Models"
 subtitle: "April 2, 2026. Multimodal. Apache 2.0. Ready for your device."
 date: 2026-04-04T17:30:00+07:00
 lastmod: 2026-04-04T17:30:00+07:00
@@ -14,15 +14,15 @@ resources:
    src: "gemma-4-official.jpg"
 ---
 
-**Google DeepMind released Gemma 4 recently — April 2, 2026.**
+**Google DeepMind released Gemma 4 recently - April 2, 2026.**
 
 I've been scrolling through tech news and forums waiting for something new to come up. Finally, it dropped. I've been tracking the open-weight LLM space closely, and this is also one of the open-weight models that I've been waiting for and can't wait to talk about. Four new models dropped on April 2, all Apache 2.0:
-- **E2B** (effective ~2B) — tiny, efficient, runs on almost anything
-- **E4B** (effective ~4.5B) — the sweet spot for laptops and phones  
-- **26B MoE** (4B active) — high quality, fast inference
-- **31B dense** — the big one, maximum capability
+- **E2B** (effective ~2B) - tiny, efficient, runs on almost anything
+- **E4B** (effective ~4.5B) - the sweet spot for laptops and phones  
+- **26B MoE** (4B active) - high quality, fast inference
+- **31B dense** - the big one, maximum capability
 
-And yes, they're all multimodal now. Images, video, audio — built in from the start, not bolted on later.
+And yes, they're all multimodal now. Images, video, audio - built in from the start, not bolted on later.
 
 ---
 
@@ -39,16 +39,16 @@ This is useful if you're deploying on-device and don't want to juggle multiple m
 
 ### Math & Reasoning Got Better
 
-The 31B dense model hit **89.2% on AIME 2026**. That's competitive with the best closed-weight models at this size. Instruction following is also noticeably sharper — less "I think you mean..." and more just doing it.
+The 31B dense model hit **89.2% on AIME 2026**. That's competitive with the best closed-weight models at this size. Instruction following is also noticeably sharper - less "I think you mean..." and more just doing it.
 
 ### Agentic Capabilities
 
 Gemma 4 was built from the ground up for autonomous agents. Key features:
 
-- **Native function calling** — structures API calls correctly, no guessing games
-- **Structured JSON output** — clean, parseable responses (no regex hell)
-- **Multi-step planning** — breaks complex tasks into executable steps
-- **t2-bench score: 86.4%** — competitive with much larger models
+- **Native function calling** - structures API calls correctly, no guessing games
+- **Structured JSON output** - clean, parseable responses (no regex hell)
+- **Multi-step planning** - breaks complex tasks into executable steps
+- **t2-bench score: 86.4%** - competitive with much larger models
 
 Google built this to power Android Studio's Agent Mode, but it works anywhere you need tools and APIs. It's genuinely good at multi-step workflows, not just chat.
 
@@ -56,7 +56,7 @@ Google built this to power Android Studio's Agent Mode, but it works anywhere yo
 
 ## So, How Does It Stack Up? (Gemma 4 vs Qwen3.5)
 
-Alright, let's talk numbers because I know you're curious. I have a feeling Qwen3.5 27B will still be my go-to for coding — so I dug up some benchmark results to see if my hunch holds water. Spoiler: it does, but with a twist.
+Alright, let's talk numbers because I know you're curious. I have a feeling Qwen3.5 27B will still be my go-to for coding - so I dug up some benchmark results to see if my hunch holds water. Spoiler: it does, but with a twist.
 
 ### The Benchmarks (TL;DR)
 
@@ -84,7 +84,7 @@ Alright, let's talk numbers because I know you're curious. I have a feeling Qwen
 
 ### The Arena AI Leaderboard (Real Talk from Users)
 
-I also checked Arena AI's open-source leaderboard — this is where people actually chat with these models and give them ratings:
+I also checked Arena AI's open-source leaderboard - this is where people actually chat with these models and give them ratings:
 
 | Model | ELO Score | Rank Among Open Models |
 |-------|-----------|------------------------|
@@ -97,7 +97,7 @@ I also checked Arena AI's open-source leaderboard — this is where people actua
 
 ### What This Means for Practitioners 🤔
 
-**Static tests**: Qwen3.5-27B beats Gemma 4 31B in 4 out of 6 categories (coding, knowledge, science reasoning). The margins are small — like 0.7% to 1.2% — but consistent. If you're building tools that require precise reasoning or heavy coding, Qwen's got the edge.
+**Static tests**: Qwen3.5-27B beats Gemma 4 31B in 4 out of 6 categories (coding, knowledge, science reasoning). The margins are small - like 0.7% to 1.2% - but consistent. If you're building tools that require precise reasoning or heavy coding, Qwen's got the edge.
 
 **But here's where it gets interesting**: On Arena AI, Gemma 4 ranks *higher* than comparable Qwen models. The 31B variant is #3 overall at ELO 1452, while Qwen3.5-27B sits around #10 with 1404. That's a 48-point gap!
 
@@ -110,17 +110,17 @@ Meanwhile, Qwen feels... clunkier in dialogue mode, even though it's technically
 
 ### My Verdict
 
-**For coding-heavy workloads**: Still sticking with my gut — Qwen3.5-27B is the pick. LiveCodeBench lead + stronger agent behavior (Tau2) = better for actually writing code or building tools.
+**For coding-heavy workloads**: Still sticking with my gut - Qwen3.5-27B is the pick. LiveCodeBench lead + stronger agent behavior (Tau2) = better for actually writing code or building tools.
 
 **For multimodal/multilingual edge use cases**: Gemma 4's native image/audio support and MMMLU strength might be worth the tradeoff. Especially if you're deploying on-device where conversation flow matters more than raw benchmark scores.
 
-**Bottom line**: Benchmarks confirm my preference — Qwen3.5 is sharper on technical tasks. But if conversational smoothness is your priority, Gemma could feel better in real use. You should probably test both locally to see which one just *feels* right for your use case.
+**Bottom line**: Benchmarks confirm my preference - Qwen3.5 is sharper on technical tasks. But if conversational smoothness is your priority, Gemma could feel better in real use. You should probably test both locally to see which one just *feels* right for your use case.
 
 ---
 
 ## Edge AI: What I Actually Tried on My Phone
 
-Edge AI is about running models directly on your device — no internet required. This matters for anyone who needs AI to work offline, whether you're traveling through areas with poor connectivity or simply value privacy and speed.
+Edge AI is about running models directly on your device - no internet required. This matters for anyone who needs AI to work offline, whether you're traveling through areas with poor connectivity or simply value privacy and speed.
 
 I put Google's [AI Edge Gallery](https://play.google.com/store/apps/details?id=com.google.ai.edge.gallery) app to the test. It demonstrates how Gemma 4 can run locally on a phone, processing images and text without ever sending data to the cloud. The setup is straightforward: install the app, load the model, and you have an offline-capable assistant running entirely on your hardware.
 
@@ -131,7 +131,7 @@ I put Google's [AI Edge Gallery](https://play.google.com/store/apps/details?id=c
 - Audio transcription and translation
 - Basic text generation for drafting or brainstorming
 
-The tradeoff? Edge models prioritize speed and efficiency over raw intelligence. They're designed for quick, practical tasks — not to compete with the massive cloud models on complex reasoning. For emergency scenarios where you just need to understand something or draft a quick note without internet, they're surprisingly capable.
+The tradeoff? Edge models prioritize speed and efficiency over raw intelligence. They're designed for quick, practical tasks - not to compete with the massive cloud models on complex reasoning. For emergency scenarios where you just need to understand something or draft a quick note without internet, they're surprisingly capable.
 
 ![Google AI Edge Gallery screenshot showing offline functionality](../gemma-4-release-edge-ai/edge-gallery.jpg)
 
@@ -139,6 +139,6 @@ The tradeoff? Edge models prioritize speed and efficiency over raw intelligence.
 
 ## Final Thoughts
 
-Gemma 4 is impressive — especially for what it tries to do. Google's clearly aiming at the "AI assistant on your phone" use case, and the multimodal capabilities are a real differentiator. But if you're building something that demands precision (coding, technical reasoning), Qwen3.5 still edges it out.
+Gemma 4 is impressive - especially for what it tries to do. Google's clearly aiming at the "AI assistant on your phone" use case, and the multimodal capabilities are a real differentiator. But if you're building something that demands precision (coding, technical reasoning), Qwen3.5 still edges it out.
 
-The real winner here might be having both options available — pick whichever fits your workflow better.
+The real winner here might be having both options available - pick whichever fits your workflow better.

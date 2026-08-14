@@ -37,7 +37,7 @@ Setelah itu, kita fokus ke pengamanan traffic **dalam** Kubernetes cluster (traf
 
 Biar makin aman dan operasionalnya otomatis, kita bikin service `security and operation` sendiri. Ini kayak API pusat yang ringan buat nanganin tugas-tugas operasional umum. Salah satu fiturnya terhubung dengan *tools* keamanan runtime kita, `Falco`. Jadi kalau Falco nemu aktivitas mencurigakan, service ini langsung bikin network policy buat ngisolasi pod yang kena. (Walaupun nggak lama setelah itu, muncul `Falco Talon` yang bisa otomatis nanganin hal ini juga.)  
 
-Setelah infrastrukturnya beres, tantangan berikutnya muncul di layer aplikasi — terutama soal manajemen rahasia (secrets). Ada beberapa opsi: bisa pakai secret manager-nya GCP, atau kalau udah full GitOps bisa pakai sealed secrets atau sops. Tapi kita pilih `HashiCorp Vault` karena bisa jadi pusat manajemen credential yang aman dan gampang diatur.
+Setelah infrastrukturnya beres, tantangan berikutnya muncul di layer aplikasi - terutama soal manajemen rahasia (secrets). Ada beberapa opsi: bisa pakai secret manager-nya GCP, atau kalau udah full GitOps bisa pakai sealed secrets atau sops. Tapi kita pilih `HashiCorp Vault` karena bisa jadi pusat manajemen credential yang aman dan gampang diatur.
 
 ## Membangun Ekosistem Platform {#build-platform}
 
@@ -47,13 +47,13 @@ Biar workload di Kubernetes jalan dengan efisien, kita juga harus ngatur node-ny
 
 Sebelum aplikasi masuk ke proses GitOps, kita lewatin dulu pipeline CI/CD. Tantangannya, kita butuh pipeline build yang efisien tanpa harus maintain banyak agen statis. Kita pakai `Jenkins`, tapi dengan pendekatan modern. Agen Jenkins-nya diprovide secara dinamis lewat Jenkins Kubernetes Operator, yang bikin agen jalan sebagai pod dalam cluster.  
 
-Supaya hemat banget, pod agen ini jalan di GCP Spot VMs — auto-scale ke nol kalau nggak ada pipeline yang jalan. Ini bikin biaya build turun sampai 94% dibanding pakai runner yang selalu aktif. Iya, Spot VMs emang kece badai.  
+Supaya hemat banget, pod agen ini jalan di GCP Spot VMs - auto-scale ke nol kalau nggak ada pipeline yang jalan. Ini bikin biaya build turun sampai 94% dibanding pakai runner yang selalu aktif. Iya, Spot VMs emang kece badai.  
 
 Lanjut ke proses deployment aplikasi. Nge-deploy aplikasi ke banyak cluster Kubernetes, apalagi di lingkungan hybrid, itu ribet. Kita pakai `ArgoCD` buat manage semuanya. Solusi ini bisa handle GitOps deployment dari satu titik ke semua cluster. Dibanding `FluxCD`, ArgoCD punya visibilitas terpusat dan ga nambah sistem *footprint* di sisi cluster target.
 
 Meskipun job title-nya bukan developer, gue masih ngoding terus. Kaya misalnya custom service yang gue bikin kemarin itu pakai `Rust`. Emang bukan bahasa yang paling produktif sih menurut gue, tapi cara Rust nge-handle memory ngajarin kita buat nulis kode lebih rapi dan aman. Di Rust ga ada garbage collector makannya bikin performa lebih bagus.
 
-Biar makin ringan dan lebih oke, kita *build* servicenya pakai base image `scratch`. Jadi kontainernya benar-benar minimum, aman, dan kecil. Ini juga ngebantu ngurangin *attack surface* dari container kita — nilai plus buat hardening keamanan.
+Biar makin ringan dan lebih oke, kita *build* servicenya pakai base image `scratch`. Jadi kontainernya benar-benar minimum, aman, dan kecil. Ini juga ngebantu ngurangin *attack surface* dari container kita - nilai plus buat hardening keamanan.
 
 ## Tetap Relevan {#stay-relevant}
 
@@ -61,7 +61,7 @@ Biar makin paham gimana sistem terdistribusi bekerja, gue ngulik algoritma konse
 
 Dan ya, sekarang siapa sih yang gak ngomongin AI. Salah satu proyek terbaru gue adalah otomatisasi code review. Kita bikin workflow automation sederhana pakai `n8n`, dan `Gemini LLM` jadi otaknya buat analisa kode dan flagging issue. Meskipun n8n bukan termasuk *Agentic AI* yang sejati, tapi buat kasus kita udah cukup. Bahkan kita berani auto-merge perubahan kecil di MR.
 
-Tahun ini benar-benar rewarding. Dari ngamanin perimeter sampai ke tiap workload, dan otomatisasi dari IaC sampai CI/CD — kita berhasil bangun platform yang nggak cuma efisien, tapi juga resilient dan aman dari desainnya.
+Tahun ini benar-benar rewarding. Dari ngamanin perimeter sampai ke tiap workload, dan otomatisasi dari IaC sampai CI/CD - kita berhasil bangun platform yang nggak cuma efisien, tapi juga resilient dan aman dari desainnya.
 
 ### Abis ini ngapain?
 {{< typeit group=paragraph-id >}}

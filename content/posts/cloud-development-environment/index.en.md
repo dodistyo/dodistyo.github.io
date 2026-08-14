@@ -86,7 +86,7 @@ Before we do the demo, here are some coder OSS key features:
   Automatically stops inactive workspaces to reduce cloud costs while preserving the persistent workspace disk.
 
 - **Web UI, CLI & API Access**  
-  Provision and manage workspaces via web dashboard, command-line interface, or API—usable by both admins and developers.
+  Provision and manage workspaces via web dashboard, command-line interface, or API-usable by both admins and developers.
 
 - **Wide Platform Support**  
   Supports Linux, Windows, macOS, and ARM architectures. Workspaces can run as VMs, containers, or Kubernetes pods.

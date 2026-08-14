@@ -14,9 +14,9 @@ resources:
    src: "qwen.png"
 ---
 
-The open-weight LLM scene has been moving fast lately — but most of the noise is just bigger parameter counts chasing diminishing returns. What's actually interesting right now isn't about how massive a model can get, but how much capability we're packing into something that runs on consumer hardware.
+The open-weight LLM scene has been moving fast lately - but most of the noise is just bigger parameter counts chasing diminishing returns. What's actually interesting right now isn't about how massive a model can get, but how much capability we're packing into something that runs on consumer hardware.
 
-Enter **Qwen 3.5**, which Alibaba released in February with two variants designed for exactly this moment: the **27B** dense model and **35B-A3B** MoE. These aren't trying to be GPT-5 replacements. They're asking a different question entirely — what if you could run frontier-level reasoning locally without needing an API key or worrying about token costs?
+Enter **Qwen 3.5**, which Alibaba released in February with two variants designed for exactly this moment: the **27B** dense model and **35B-A3B** MoE. These aren't trying to be GPT-5 replacements. They're asking a different question entirely - what if you could run frontier-level reasoning locally without needing an API key or worrying about token costs?
 
 I've spent the last week running both variants through their paces, from coding tasks to building AI agents for daily use. The results are worth digging into, not because they're perfect, but because they represent something we haven't really had before: genuinely useful models that you can actually run yourself.
 
@@ -31,7 +31,7 @@ Qwen 3.5 isn't just another model release. It's a hybrid reasoning family suppor
 | **Qwen3.5-35B-A3B** | MoE (Mixture of Experts) | ~3B per forward pass | ~72GB F16 | ✅ 24GB RAM/VRAM |
 | **Qwen3.5-27B** | Dense | Full 27B | ~54GB F16 | ✅ 18-24GB RAM/VRAM |
 
-> 💡 **Quick guide**: Pick **27B** if you want slightly more accurate results and can fit it in your hardware. Go for **35B-A3B** if you prioritize speed — the MoE architecture means only ~3B parameters activate per token, making inference much faster despite having 35B total params.
+> 💡 **Quick guide**: Pick **27B** if you want slightly more accurate results and can fit it in your hardware. Go for **35B-A3B** if you prioritize speed - the MoE architecture means only ~3B parameters activate per token, making inference much faster despite having 35B total params.
 
 ### The Benchmark Evidence
 
@@ -51,9 +51,9 @@ Here's where it gets interesting. Let's look at the actual numbers that show Qwe
 | Claude 3.7 Sonnet | **70.3%** | Feb 24, 2025 | Proprietary (older gen) |
 | GPT-4o | **~65%** | May 2024 | Proprietary (older gen) |
 
-**What this means**: Qwen 3.5-27B (open-weight, free to run locally) beats models that are **years older** — Claude 3.7 Sonnet (Feb 2025), GPT-4o (May 2024) — and outperforms Devstral Small 2 from just a month prior.
+**What this means**: Qwen 3.5-27B (open-weight, free to run locally) beats models that are **years older** - Claude 3.7 Sonnet (Feb 2025), GPT-4o (May 2024) - and outperforms Devstral Small 2 from just a month prior.
 
-> 💡 **Context**: Remember Devstral Small 2 from my last post? Released Dec 22, 2025, it scored **68%** on SWE-Bench and was already impressive for a ~24B model. Now Qwen 3.5-27B (released Feb 17, 2026 — just **57 days later**) is at **72.4%**. That's a **4-point jump** in under two months, closing the gap to top proprietary models (Opus 4.6 at 80.8%) by less than 10 points.
+> 💡 **Context**: Remember Devstral Small 2 from my last post? Released Dec 22, 2025, it scored **68%** on SWE-Bench and was already impressive for a ~24B model. Now Qwen 3.5-27B (released Feb 17, 2026 - just **57 days later**) is at **72.4%**. That's a **4-point jump** in under two months, closing the gap to top proprietary models (Opus 4.6 at 80.8%) by less than 10 points.
 
 **For those with modest hardware**: Qwen 3.5 also has smaller variants from 0.8B to 9B released on March 2026 that you can try it out
 
@@ -67,11 +67,11 @@ Here's where it gets interesting. Let's look at the actual numbers that show Qwe
 | **GPQA Diamond** (science) | **85.5%** | 70.1% | 78.9% |
 | **IFEval** (instruction following) | **95.0%** | 81.0% | 87.2% |
 
-The pattern is clear: on reasoning-heavy tasks, Qwen 3.5-27B isn't just competitive — it's often **beating** proprietary models that are 10x larger and cost thousands per month to run via API.
+The pattern is clear: on reasoning-heavy tasks, Qwen 3.5-27B isn't just competitive - it's often **beating** proprietary models that are 10x larger and cost thousands per month to run via API.
 
-But here's the thing about benchmarks: they're useful, but they don't tell the whole story. A model can ace MMLU-Pro and still stumble on your specific use case. The only way to know if Qwen 3.5 works for you? **Run it locally and test it yourself.** I'll show you how in just a few commands below — it's genuinely easy now.
+But here's the thing about benchmarks: they're useful, but they don't tell the whole story. A model can ace MMLU-Pro and still stumble on your specific use case. The only way to know if Qwen 3.5 works for you? **Run it locally and test it yourself.** I'll show you how in just a few commands below - it's genuinely easy now.
 
-The real win? You're getting this performance **locally** with quantized versions that fit in ~18GB of RAM/VRAM. That's a MacBook Pro with 36GB unified memory or a single RTX 4090 territory — no API bills, no rate limits.
+The real win? You're getting this performance **locally** with quantized versions that fit in ~18GB of RAM/VRAM. That's a MacBook Pro with 36GB unified memory or a single RTX 4090 territory - no API bills, no rate limits.
 
 ---
 
@@ -108,7 +108,7 @@ cmake --build build --config Release -j --target llama-cli llama-server
 cp build/bin/llama-* .
 ```
 
-> 💡 **First compile takes 5-10 minutes**. This is normal — the CUDA/Metal backends need to build binaries. Don't cancel it.
+> 💡 **First compile takes 5-10 minutes**. This is normal - the CUDA/Metal backends need to build binaries. Don't cancel it.
 
 ### Step 2: Download the Model
 
@@ -129,7 +129,7 @@ hf download unsloth/Qwen3.5-27B-GGUF \
     --include "*mmproj-F16*"
 ```
 
-The `mmproj` file is for vision tasks — you'll need it if you want to use multimodal features.
+The `mmproj` file is for vision tasks - you'll need it if you want to use multimodal features.
 
 ### Step 3: Run the Model
 
@@ -168,7 +168,7 @@ export LLAMA_CACHE="unsloth/Qwen3.5-27B-GGUF"
     --port 8080
 ```
 
-> 💡 **Pro tip**: Use `--chat-template-kwargs '{"enable_thinking":false}'` to disable reasoning mode for faster responses on simple tasks. For the Small series (0.8B, 2B, 4B, 9B), thinking is disabled by default — you need to explicitly enable it with `"enable_thinking":true`.
+> 💡 **Pro tip**: Use `--chat-template-kwargs '{"enable_thinking":false}'` to disable reasoning mode for faster responses on simple tasks. For the Small series (0.8B, 2B, 4B, 9B), thinking is disabled by default - you need to explicitly enable it with `"enable_thinking":true`.
 
 ### Test It Out
 
@@ -202,7 +202,7 @@ What kind of speeds can you expect? Here's roughly what I've seen:
 | **RTX 4090** | 27B | ~50-60 tok/s | Faster due to dense architecture |
 | **CPU only (16 cores)** | 27B-Q4 | ~8-12 tok/s | Still usable for chat |
 
-The MoE variant (35B-A3B) trades some accuracy for speed — since it only activates ~3B params per token, it's noticeably faster than the dense 27B on GPU. On CPU, the difference shrinks because memory bandwidth becomes the bottleneck.
+The MoE variant (35B-A3B) trades some accuracy for speed - since it only activates ~3B params per token, it's noticeably faster than the dense 27B on GPU. On CPU, the difference shrinks because memory bandwidth becomes the bottleneck.
 
 ---
 
@@ -224,7 +224,7 @@ The 35B-A3B variant excels at multi-step reasoning tasks:
 **Why local matters for agents:** When building agentic systems, you're making hundreds or thousands of API calls. Running locally means:
 - No $20-50/month API bills for experimentation
 - Zero latency when iterating on agent logic
-- Full privacy — your code and data never leave your machine
+- Full privacy - your code and data never leave your machine
 
 > 💡 **Pro tip**: For coding agents, use the 27B variant (better performence). For general-purpose agentic workflows requiring speed, go with 35B-A3B's MoE architecture.
 
@@ -242,7 +242,7 @@ The model supports 256K context officially, but here's what actually works on co
 | **16GB** | ~8K max | Small series only (9B) | 27B/35B won't fit comfortably |
 
 **Reality check on context windows:**
-- The advertised 256K context requires **~80-100GB VRAM** at full precision — not feasible for consumer hardware
+- The advertised 256K context requires **~80-100GB VRAM** at full precision - not feasible for consumer hardware
 - At Q4 quantization with 24GB VRAM, you're realistically looking at **16K-64K context window** before running out of memory
 - Each additional 8K context adds ~2-4GB of RAM usage depending on model size
 
@@ -278,8 +278,8 @@ Once you've got this running, explore:
 - **Model performence** Compare performence with other open weight model. 
 - **Small series** Explore the smaller variant model (0.8B to 9B) if you need ultra-fast inference on mobile devices
 
-The open model ecosystem is moving fast — and honestly, it's been fun watching the gap close. What will drop next month? I'm here for it. 🚀
+The open model ecosystem is moving fast - and honestly, it's been fun watching the gap close. What will drop next month? I'm here for it. 🚀
 
 ---
 
-*Have questions or hit a snag running Qwen 3.5 locally? Drop me a note — happy to help debug.*
+*Have questions or hit a snag running Qwen 3.5 locally? Drop me a note - happy to help debug.*
