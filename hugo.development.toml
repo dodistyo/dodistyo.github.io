@@ -195,6 +195,10 @@ languageName = "English"
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
   
+  [params.page]
+    # whether to enable lightgallery
+    lightgallery = true
+
   [params.page.share]
     enable = true
     X = true # LoveIt NEW | 0.3.1

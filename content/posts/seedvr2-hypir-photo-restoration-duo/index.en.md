@@ -3,7 +3,7 @@
 title: "SeedVR2 + HYPIR: The Photo Restoration Duo I Never Expected to Be This Good"
 subtitle: "Two open-source models, one ComfyUI workflow, surprisingly better results than paid tools"
 date: 2026-08-14T09:00:00+07:00
-lastmod: 2026-08-14T09:00:00+07:00
+lastmod: 2026-08-15T09:00:00+07:00
 draft: false
 author: "Dodi Prasetyo"
 description: "I combined SeedVR2 and HYPIR in ComfyUI to restore an old faded family photo. The results beat proprietary tools. Here is the workflow and why the model order matters."
@@ -32,7 +32,7 @@ Here is what I built, how it works, and why the order of operations actually mat
 
 ## The Photo
 
-![Original faded family photo](original-photo.jpg)
+{{< image src="original-photo.jpg" alt="Original faded family photo" caption="The original faded family photo I used as test material" >}}
 
 I picked an old family photo that had seen better days. The scan was low resolution, the colors had faded, and the facial details were barely readable. Perfect test material for a restoration workflow.
 
@@ -64,7 +64,7 @@ HYPIR outputs at resolutions above 2K and uses a tiling strategy to handle large
 
 On paper, these models solve the same problem. In practice, they bring different strengths to the table.
 
-SeedVR2 handles the big picture. It recovers the overall structure, fixes color casts, and upscales to a usable resolution. But it don't always nail the fine textures.
+SeedVR2 handles the big picture. It recovers the overall structure, fixes color casts, and upscales to a usable resolution. But it doesn't always nail the fine textures.
 
 HYPIR handles the details. It refines texture, sharpens edges at a micro level, and adds the kind of grain and noise that makes a photo look natural instead of artificially smooth.
 
@@ -83,7 +83,7 @@ I tested both workflows:
 
 The second order won. Here is why.
 
-When you run HYPIR on a low-resolution photo, it works with limited pixel information. The model has to guess at details from a small canvas. Then when SeedVR2 upscales, it stretches those guesses. The result looks okay at first glance, but the details feel artificial and the texture don't hold up under scrutiny.
+When you run HYPIR on a low-resolution photo, it works with limited pixel information. The model has to guess at details from a small canvas. Then when SeedVR2 upscales, it stretches those guesses. The result looks okay at first glance, but the details feel artificial and the texture doesn't hold up under scrutiny.
 
 When you run SeedVR2 first, it upscales the photo to a higher resolution while preserving the original structure. Now HYPIR has more pixels to work with. The model can recover texture and detail from a larger, cleaner canvas. The result is sharper, more natural, and holds up better when you zoom in.
 
@@ -97,7 +97,7 @@ I ran the same photo through both orders. The SeedVR2-first pipeline produced no
 
 Here is what the ComfyUI setup looks like:
 
-![ComfyUI workflow showing the SeedVR2 pipeline](workflow-used.png)
+{{< image src="workflow-used.png" alt="ComfyUI workflow showing the SeedVR2 pipeline" caption="ComfyUI workflow showing the SeedVR2 first, HYPIR second pipeline" >}}
 
 The workflow loads the photo, runs it through SeedVR2 for upscaling and structural recovery, then passes the output to HYPIR for texture refinement and detail enhancement. The sidebar shows both workflows in the image enhancement category.
 
@@ -109,13 +109,13 @@ I won't go node by node here. The graph speaks for itself if you are familiar wi
 
 Here is the full before and after:
 
-![Full comparison of original faded photo versus SeedVR2 + HYPIR enhanced version](original-vs-enhanced-(seedvr-hypir).png)
+{{< image src="original-vs-enhanced-(seedvr-hypir).png" alt="Full comparison of original faded photo versus SeedVR2 + HYPIR enhanced version" caption="Full comparison: original faded photo versus SeedVR2 + HYPIR enhanced version" >}}
 
 The color recovery alone is worth it. The faded sepia tones are gone, the faces are readable, and the overall image looks like it was scanned properly instead of photocopied three times.
 
 Now let us zoom in on the details:
 
-![Zoomed comparison showing texture recovery and facial detail](original-vs-enhanced-zoomed-(seedvr-hypir).png)
+{{< image src="original-vs-enhanced-zoomed-(seedvr-hypir).png" alt="Zoomed comparison showing texture recovery and facial detail" caption="Zoomed comparison showing texture recovery and facial detail" >}}
 
 The texture work is where HYPIR earns its place in the pipeline. Skin texture, fabric grain, background detail - all of it is recovered without looking artificially sharpened. The model knows when to add detail and when to leave things alone.
 
@@ -125,7 +125,7 @@ The texture work is where HYPIR earns its place in the pipeline. Skin texture, f
 
 I ran the same photo through a few proprietary restoration services to see how this open-source combo stacks up.
 
-![Comparison of SeedVR2 + HYPIR output against proprietary restoration tools](output-comparison-with-proprietary.png)
+{{< image src="output-comparison-with-proprietary.png" alt="Comparison of SeedVR2 + HYPIR output against proprietary restoration tools" caption="Comparison of SeedVR2 + HYPIR output against proprietary restoration tools" >}}
 
 Each panel shows which proprietary tool it is compared against. Nano Banana and ChatGPT both do decent work. Nano Banana still looks a bit blurry. ChatGPT produces good quality, but the facial identity shifts - the face changes just enough to feel like someone else. Look closely and decide for yourself.
 
@@ -145,7 +145,7 @@ The open-source image restoration space is moving fast. Models like SeedVR2 and 
 
 What this workflow shows is that you don't need a subscription or an API key to get professional-quality photo restoration. You need a good GPU, some patience with ComfyUI, and the right combination of models.
 
-The fact that the order matters is the kind of insight you only get by running the models yourself. Reading about them don't tell you that SeedVR2-first produces better texture recovery. You have to test it.
+The fact that the order matters is the kind of insight you only get by running the models yourself. Reading about them doesn't tell you that SeedVR2-first produces better texture recovery. You have to test it.
 
 ---
 
