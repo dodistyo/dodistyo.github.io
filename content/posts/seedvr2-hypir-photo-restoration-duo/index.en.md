@@ -1,7 +1,7 @@
 ---
 
 title: "SeedVR2 + HYPIR: The Photo Restoration Duo I Never Expected to Be This Good"
-subtitle: "Two open-source models, one ComfyUI workflow, surprisingly better results than paid tools"
+subtitle: "A good model combination for photo restoration"
 date: 2026-08-14T09:00:00+07:00
 lastmod: 2026-08-15T09:00:00+07:00
 draft: false
