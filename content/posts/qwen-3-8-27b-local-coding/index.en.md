@@ -154,7 +154,7 @@ The fair review has a "but." Here's where it lived up to the benchmarks, and whe
 - **The long-loop gap is real.** On the most involved multi-step builds, the kind that run dozens of tool calls in a row, I could feel the Terminal-Bench difference. It's a step behind the frontier models on marathon autonomy, exactly as the 7 to 8 point gap suggests.
 - **Dense is slower than MoE.** Next to Qwen3.6-35B-A3B on the same box, the 27B is the slower one. For agentic work where I care about quality over raw tokens-per-second, that's a fine trade. For latency-sensitive stuff, I'd pick the MoE.
 
-> 💡 **The working style that made it useful.** I treat the local model like a careful junior engineer who overthinks the easy things. Give it a clear spec, let it think where it counts, make it prove the work with tests, and verify every claim against real output. Do that and a 24GB model on your desk does work that was cloud-only a year ago.
+> 💡 **The working style that made it useful.** I treat the local model like a careful junior engineer who overthinks the easy things. Give it a clear spec, let it think where it counts, make it prove the work with tests, and verify every claim against real output. Do that and a 27B model on your own card does work that was cloud-only a year ago.
 
 ---
 
