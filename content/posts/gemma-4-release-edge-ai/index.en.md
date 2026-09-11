@@ -1,5 +1,4 @@
 ---
-weight: 99
 title: "Gemma 4 Is Here - Google's Newest Open-Weight Models"
 subtitle: "April 2, 2026. Multimodal. Apache 2.0. Ready for your device."
 date: 2026-04-04T17:30:00+07:00

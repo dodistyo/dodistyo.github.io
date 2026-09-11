@@ -9,7 +9,6 @@ author: "Dodi Prasetyo"
 description: "I combined SeedVR2 and HYPIR in ComfyUI to restore an old faded family photo. The results beat proprietary tools. Here is the workflow and why the model order matters."
 tags: ["AI", "ComfyUI", "Photo Restoration", "Open Source", "SeedVR2", "HYPIR", "Image Upscaling", "Intermediate"]
 categories: ["Artificial Intelligence"]
-weight: 1
 resources:
  - name: "featured-image"
    src: "featured-image.png"

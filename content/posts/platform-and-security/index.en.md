@@ -1,5 +1,4 @@
 ---
-weight: 100
 title: "Platform Engineering And Cyber Security Stories"
 date: 2025-06-20T19:37:00+07:00
 lastmod: 2025-06-20T19:37:00+07:00

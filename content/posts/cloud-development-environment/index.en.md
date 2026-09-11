@@ -1,5 +1,4 @@
 ---
-weight: 100
 title: "Take Your Dev Setup Anywhere with CDE"
 date: 2025-07-20T19:30:00+07:00
 draft: false

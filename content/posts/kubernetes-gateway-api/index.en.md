@@ -1,5 +1,4 @@
 ---
-weight: 1000
 title: "Kubernetes Gateway API"
 date: 2025-07-05T00:00:00+07:00
 lastmod: 2025-07-05T00:00:00+07:00
