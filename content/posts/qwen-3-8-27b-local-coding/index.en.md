@@ -2,7 +2,7 @@
 title: "While Big Labs Race to AGI, Here I Am With My Qwen3.8 27B:"
 subtitle: "Benchmarks are one thing. The real test is pointing a local LLM at a working project and seeing what it actually ships."
 date: 2026-09-11T00:00:00+07:00
-lastmod: 2026-09-11T00:00:00+07:00
+lastmod: 2026-09-14T00:00:00+07:00
 draft: false
 author: "Dodi Prasetyo"
 description: "Qwen 3.8 27B runs on a single 24GB GPU and reports frontier-level coding scores. I tested it the hard way: building and shipping a full multiplayer game, test by test."
@@ -116,15 +116,15 @@ The stack is the interesting part, because it spans the exact kinds of work a co
 
 | Layer | What it is |
 |-------|-----------|
-| Server | Rust (Axum + tokio) WebSocket game engine, **6,731 lines** |
-| Client | Vanilla JS, no framework, mobile-first PWA, **3,061 lines** |
-| Server tests | **214** unit + integration tests |
-| Client tests | **115** unit tests + **21** Playwright e2e specs |
-| History | **133** commits across two git repos |
+| Server | Rust (Axum + tokio) WebSocket game engine, **8,870 lines** |
+| Client | Vanilla JS, no framework, mobile-first PWA, **3,096 lines** |
+| Server tests | **234** unit + integration tests |
+| Client tests | **105** unit tests + **66** Playwright e2e tests |
+| History | **156** commits across two git repos |
 | Packaging | Multi-stage Docker build ending in `FROM scratch` |
 | Hosting | poker-banting.dodistyo.com (Cloud Run behind a Cloudflare tunnel) |
 
-No framework on the client, an in-memory state model that I chose on purpose for now, and a container image so small it's basically a static binary. That last bit is not nothing. The build cross-compiles the Rust server to a static musl binary and drops it into a scratch image, because the app has no runtime and no dependencies to ship.
+No framework on the client, a pluggable state model (in-memory for local dev, Redis in production) that I chose on purpose for now, and a container image so small it's basically a static binary. That last bit is not nothing. The build cross-compiles the Rust server to a static musl binary and drops it into a scratch image, because the app has no runtime and no dependencies to ship.
 
 How it actually got built matters for the review, because the "one-shot prompt" story is not this one. There was no magic single prompt. I built the game in my spare time, one feature at a time. A task in my agent's Telegram chat, a review of what it shipped, repeat, over weeks. And the project has a two-generation history: the initial build was driven by **Qwen 3.6 27B** through the opencode harness. The BOMB and POKER rules I'll describe next were built by its older sibling, this Qwen 3.8 27B, driven through Hermes Agent from my phone. Same family, a generation apart, different harnesses. The newer one handled the trickier rules cleanly.
 
@@ -134,7 +134,7 @@ The game itself is straightforward: 13 cards each, and every trick you either ou
 
 The **BOMB**: four cards of the same rank (anything except 2), playable only as a response to a single 2. It beats everything and ends the trick. The trap a shallow pass would hit: four 2s is impossible by design, because that's exactly what triggers the **4×2 "poker" rule** at deal time. So the model had to add a **guarded deal** that silently re-deals the round whenever anyone is dealt four 2s, without desyncing the table. One change, four modules at once.
 
-The bomb feature itself was worked test-first: failing tests up front, watched to fail, then driven green over the next few sessions. The suite landed at 214 server tests passing, with the client mirroring the same rules so a human and a bot can't disagree about what a legal move is.
+The bomb feature itself was worked test-first: failing tests up front, watched to fail, then driven green over the next few sessions. The suite landed at 234 server tests passing, with the client mirroring the same rules so a human and a bot can't disagree about what a legal move is.
 
 That's the kind of task the SWE-bench Pro number is supposed to predict. A 27B model, on my hardware, coordinating a change across four modules in a language I don't write daily, held together. On the surface this is a simple card game. Under the hood it has a surprising amount of logic, and Qwen 3.8 27B delivered on it cleanly.
 
